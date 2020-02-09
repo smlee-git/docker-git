@@ -6,14 +6,14 @@ LABEL maintainer "Shiho ASA"
 
 # Configure environment
 ENV CONDA_DIR=/opt/conda \
-    NB_USER=jovyan
-    
+    NB_USER=dojin
+
 # Install Jupyter Notebook and Hub
 RUN conda install --quiet --yes \
-    'numpy=1.13.*' \
-    'scipy=0.19.*' \
-    'sympy=1.1.*' \
-    'matplotlib=2.1.*' \
+    'numpy=1.16.*' \
+    'scipy=1.2.*' \
+    'sympy=1.5.*' \
+    'matplotlib=3.1.*' \
     && conda clean -tipsy && \
     fix-permissions $CONDA_DIR
 
